@@ -1,0 +1,84 @@
+.general-layout {
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+
+
+    &__navbar {
+        background-color: #010101;
+        height: 20%;
+        font-family: 'Bungee Inline', cursive;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__navbar-panel {
+        width: 93%;
+        height:40%;
+        margin: 0 auto;
+        display: flex;
+        &--logo {
+            :nth-child(1) {
+                color: white;
+                font-size: 30px;
+            }
+
+            :nth-child(2) {
+                color: #E0C389;
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__navbar-decoration {
+        background-color: #E0C389;
+        height: 60%;
+
+    }
+
+    &__content {
+        display:grid;
+        background-color: white;
+        // height: 75%;
+        width: 75%;
+        position: absolute;
+        top: 12%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+        &--header{ 
+            display: flex;
+            align-items: center;
+        }
+
+        &--header-title {
+            font-weight: 900;
+            font-size: 36px;
+            padding-left: 2rem;
+        }
+
+        &--albums {
+            display: flex;
+            min-height: 75vh;
+            max-height: 75vh;
+            justify-content: center;
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+    
+}
+
+.divider { 
+    text-align: center; 
+    height: 1%;
+  } 
+
+.divider hr { 
+    border: none; 
+    height: 1px; 
+    background-color: lightgray; 
+    margin: 0;
+  } 

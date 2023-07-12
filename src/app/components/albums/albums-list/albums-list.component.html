@@ -1,0 +1,16 @@
+<div class="albums-list">
+  <div class="albums-container">
+  <ng-container *ngFor="let album of albums">
+    <div class="albums-container__single-album">
+      <img [src]="album.image">
+      <div class="albums-container__single-album--album-information">
+        <span>{{album.albumName}}</span>
+        <div *ngFor="let artist of album.artists">
+          <span>{{artist}}</span>
+        </div>
+        
+      </div>
+    </div>
+  </ng-container>
+</div>
+</div>

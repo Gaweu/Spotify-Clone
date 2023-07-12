@@ -1,0 +1,27 @@
+<div class="general-layout">
+  <div class="general-layout__navbar">
+    <div class="general-layout__navbar-panel">
+      <div class="general-layout__navbar-panel--logo">
+        <span>Track</span>
+        <span>Vibe</span>
+      </div>
+      <ng-container *ngIf="auth.authenticated$.value">
+        <div style="color: white">Halo</div>
+        <button (click)="auth.logout()">Logout</button>
+      </ng-container>
+    </div>
+    <div class="general-layout__navbar-decoration"></div>
+  </div>
+  <div class="general-layout__content">
+    <div class="general-layout__content--header">
+      <span class="general-layout__content--header-title">{{pageHeader}}</span>
+    </div>
+    <div class="divider">
+      <hr>
+    </div>
+    <div class="general-layout__content--albums">
+      <router-outlet></router-outlet>
+    </div>
+    <footer>xd</footer>
+  </div>
+</div>
