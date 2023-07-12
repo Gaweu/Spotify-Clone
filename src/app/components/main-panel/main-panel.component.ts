@@ -21,13 +21,19 @@ export class MainPanelComponent implements OnInit {
     this.auth.getPlaylist(this.accessToken).subscribe((data => {
       data.items.forEach((element: any) => {
           let artists: string[] = [];
+          let tracks: string[] = [];
           element.album.artists.forEach((artist: any) => {
             artists.push(artist.name);
+          })
+          element.album.tracks.items.forEach((track: any) => {
+            tracks.push(track.uri);
           })
           this.albums.push({
             albumName: element.album.name,
             image: element.album.images[0].url,
             artists: artists,
+            context: element.album.uri,
+            tracks: tracks
           });
       });
     }))

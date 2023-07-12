@@ -34,4 +34,6 @@ export class GeneralLayoutComponent implements OnInit {
       this.pageHeader = header?.headerName;
     }
   }
+
+  
 }
