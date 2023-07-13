@@ -7,8 +7,15 @@
       </div>
       <ng-container *ngIf="auth.authenticated$.value">
         <div style="color: white">Halo</div>
-        <button (click)="auth.logout()">Logout</button>
+        <button (click)="logout()">Logout</button>
       </ng-container>
+      <div class="vertical-divider">
+        <hr>
+      </div>
+      <div>
+        <label for="name">Name: </label>
+        <input id="name" type="text" [formControl]="searchField">
+      </div>
     </div>
     <div class="general-layout__navbar-decoration"></div>
   </div>
@@ -29,6 +36,7 @@
       <img class="general-layout__player--album-image">
       <div class="general-layout__player--album-information">
         <span></span>        
+        <button (click)="togglePlay()">Play</button>
       </div>
 
     </div>

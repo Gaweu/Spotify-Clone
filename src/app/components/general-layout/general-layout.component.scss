@@ -99,3 +99,15 @@
     background-color: lightgray; 
     margin: 0;
   } 
+
+  .vertical-divider {
+    text-align: center;
+    padding-left: 5px;
+  }
+
+  .vertical-divider hr {
+    height: 100%;
+    width: 0.5px;
+    background-color: grey;
+    margin: 0;
+  }

@@ -18,11 +18,13 @@ export class AlbumsListComponent implements OnInit {
   ngOnInit() {
     console.log(this.albums);
     this.token = this.auth.getAccessToken();
-  }
+    this.player.connectToPlayer(this.token);
+
+    }
 
   playMusic(album: IAlbum) {
-    console.log(album);
     this.player.playTrack(this.token, album.context).subscribe();
+
   }
 
 }
